@@ -18,7 +18,9 @@ var orm = {
 			handle(data);
 		})
 	},
-	updateOne: function () { }
+	updateOne: function (table, inputCol, inputVal, filterCol, filter) {
+		var query = "UPDATE ?? SET ??=? WHERE ??=?";
+	}
 
 }
 
