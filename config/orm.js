@@ -4,21 +4,21 @@ var connection = require("./connection.js");
 // updateOne()
 var orm = {
 
-	selectAll: function (select, table) {
+	selectAll: function (select, table, handle) {
 		var query = "SELECT ?? FROM ??";
 		connection.query(query, [select, table], function (err, data) {
 			if (err) throw err;
 			handle(data);
 		});
 	},
-	insertOne: function (table, valuesToInsert) {
+	insertOne: function (table, valuesToInsert, handle) {
 		var query = "INSERT INTO ?? VALUES (burger_name)(?)";
 		connection.query(query, [table, valuesToInsert], function (err, data) {
 			if (err) throw err;
 			handle(data);
 		})
 	},
-	updateOne: function (table, inputCol, inputVal, filterCol, filter) {
+	updateOne: function (table, inputCol, inputVal, filterCol, filter, handle) {
 		var query = "UPDATE ?? SET ??=? WHERE ??=?";
 		connection.query(query, [table, inputCol, inputVal, filterCol, filter], function (err, data) {
 			if (err) throw err;
