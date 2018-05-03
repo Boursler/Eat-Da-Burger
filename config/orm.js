@@ -20,6 +20,10 @@ var orm = {
 	},
 	updateOne: function (table, inputCol, inputVal, filterCol, filter) {
 		var query = "UPDATE ?? SET ??=? WHERE ??=?";
+		connection.query(query, [table, inputCol, inputVal, filterCol, filter], function (err, data) {
+			if (err) throw err;
+			handle(data);
+		});
 	}
 
 }
