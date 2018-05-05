@@ -16,3 +16,5 @@ PRIMARY KEY (id),
 burger_name VARCHAR(255),
 devoured BOOLEAN not null default 0
 )
+
+SELECT * FROM burgers

@@ -20,7 +20,7 @@ var burger = {
 		});
 	},
 	update: function (filter, handle) {
-		orm.updateOne("burgers", "devoured", 1, "burger_name", filter, function (data) {
+		orm.updateOne("burgers", "devoured", 1, "id", filter, function (data) {
 			handle(data);
 		})
 	}
