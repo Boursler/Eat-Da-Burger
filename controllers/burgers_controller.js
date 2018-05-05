@@ -29,7 +29,7 @@ router.put("/api/burgers/:id", function (req, res) {
 		res.status(200).end();
 	}
 
-	res.status(200).end();
+
 })
 // var condition = "id = " + req.params.id;
 
