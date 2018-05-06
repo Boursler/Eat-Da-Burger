@@ -4,9 +4,9 @@ var connection = require("./connection.js");
 // updateOne()
 var orm = {
 
-	selectAll: function (select, table, handle) {
-		var query = "SELECT ?? FROM ??";
-		connection.query(query, [select, table], function (err, data) {
+	selectAll: function (table, handle) {
+		var query = "SELECT * FROM ??";
+		connection.query(query, [table], function (err, data) {
 			if (err) throw err;
 			handle(data);
 		});

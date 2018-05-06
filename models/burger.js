@@ -10,7 +10,7 @@ var orm = require("../config/orm.js");
 //   },
 var burger = {
 	showAll: function (handle) {
-		orm.selectAll("burger_name", "burgers", function (data) {
+		orm.selectAll("burgers", function (data) {
 			handle(data);
 		});
 	},
