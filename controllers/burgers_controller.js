@@ -13,7 +13,7 @@ router.get("/index", function (req, res) {
 });
 
 router.post("/api/burgers", function (req, res) {
-	burger.insert([req.body.name], function (result) {
+	burger.insert([req.body.burger_name], function (result) {
 		// Send back the ID of the new quote
 		res.json({ id: result.insertId });
 	});
