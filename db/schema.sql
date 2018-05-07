@@ -18,3 +18,5 @@ devoured BOOLEAN not null default 0
 )
 
 SELECT * FROM burgers
+
+UPDATE burgers SET devoured=0 WHERE id;
