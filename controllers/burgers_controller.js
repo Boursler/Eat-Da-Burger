@@ -20,17 +20,16 @@ router.post("/api/burgers", function (req, res) {
 });
 
 router.put("/api/burgers/:id", function (req, res) {
-	burger.update({
-		id: req.params.id
-	}), function (result) {
-		if (result.changedRows === 0) {
-			return res.status(404).end();
-		}
-		res.status(200).end();
-	}
+	burger.update(req.body.id
+		, function (result) {
+			if (result.changedRows === 0) {
+				return res.status(404).end();
+			}
+			res.status(200).end();
+		})
 
 
-})
+});
 
 module.exports = router;
 // var condition = "id = " + req.params.id;
